@@ -1,0 +1,352 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f5deb3, #bdb6b6);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #1e40af, #b0b0b0);
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.navbar nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Task Summary */
+.task-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.summary-card p {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+/* Add Task */
+.add-task {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.add-task h3 {
+    margin: 0 0 10px;
+}
+
+.add-task form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.add-task form input,
+.add-task form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    flex: 1;
+}
+
+.add-task form button {
+    background: linear-gradient(to right, #1e40af, #b0b0b0);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-task form button:hover {
+    background-color: #0056b3;
+}
+
+/* Task List */
+.task-list-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-list-section h3 {
+    margin-bottom: 10px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+svg{
+    height: 150px;
+    width: 150px;
+}
+svg circle{
+    fill:none;
+    transition: stroke-dashoffset 0.5s ease-out;
+}
+.background {
+    stroke: #e0e0e0; /* Couleur du cercle de fond */
+}
+
+.foreground {
+    stroke: #007bff; /* Couleur du cercle de progression */
+    stroke-linecap: round;
+    stroke-dasharray: 440; /* Le cercle fait 100% du cercle complet */
+    stroke-dashoffset: 440; /* Le cercle commence vide */
+    transform: rotate(-90deg); /* Pour que la progression commence du haut */
+    transform-origin: 50% 50%; /* Centrer la rotation */
+}
+
+.progress-text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #333;
+}
+.background {
+    stroke: #e0e0e0; /* Couleur du cercle de fond */
+}
+
+.foreground {
+    stroke:  #007bff; /* Couleur du cercle de progression */
+    stroke-linecap: round;
+    stroke-dasharray: 100; /* Le cercle fait 100% du cercle complet */
+    stroke-dashoffset: 100; /* Le cercle commence vide */
+    transform: rotate(-90deg); /* Pour que la progression commence du haut */
+    transform-origin: 50% 50%; /* Centrer la rotation */
+}
+
+.progress-text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #333;
+}
+.motivation-container {
+    background: linear-gradient(to right, #1e70b4, #0a3d56);
+    border: 2px solid (to right, #1e70b4, #0a3d56);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+
+}
+
+#motivation-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Modern Buttons */
+.task-list li button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Bouton Terminer */
+.task-list li .complete-btn {
+    background-color: #28a745; /* Vert */
+    color: white;
+}.task-list li .complete-btn:hover {
+    background-color: #218838; /* Vert foncé */
+    transform: scale(1.05);
+}
+
+/* Bouton Modifier */
+.task-list li .edit-btn {
+    background-color: #ffc107; /* Jaune */
+    color: white;
+}
+
+.task-list li .edit-btn:hover {
+    background-color: #e0a800; /* Jaune foncé */
+    transform: scale(1.05);
+}
+
+/* Bouton Supprimer */
+.task-list li .delete-btn {
+    background-color: #dc3545; /* Rouge */
+    color: white;
+}
+
+.task-list li .delete-btn:hover {
+    background-color: #c82333; /* Rouge foncé */
+    transform: scale(1.05);
+}
+
+/* Ajout d'une animation douce pour les boutons */
+.task-list li button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+svg{
+    height: 150px;
+    width: 150px;
+}
+svg circle{
+    fill:none;
+    transition: stroke-dashoffset 0.5s ease-out;
+}
+.background {
+    stroke: #e0e0e0; /* Couleur du cercle de fond */
+}
+
+.foreground {
+    stroke: #007bff; /* Couleur du cercle de progression */
+    stroke-linecap: round;
+    stroke-dasharray: 440; /* Le cercle fait 100% du cercle complet */
+    stroke-dashoffset: 440; /* Le cercle commence vide */
+    transform: rotate(-90deg); /* Pour que la progression commence du haut */
+    transform-origin: 50% 50%; /* Centrer la rotation */
+}
+
+.progress-text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #333;
+}
+.motivation-container {
+    background: linear-gradient(to right, #1e40af, #a4b2b9);
+    border: 2px solid (to right, #1e70b4, #0a3d56);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#motivation-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+/* Mode sombre */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background: linear-gradient(to right, #1e40af, #b0b0b0);
+}
+
+body.dark-mode .summary-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .add-task {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .task-list-section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .task-list li {
+    background-color: #333333;
+    border-color: #555555;
+}
+
+body.dark-mode .task-list li button {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode .task-list li button:hover {
+    background-color: #666666;
+}
+/* Styles des boutons en mode sombre */
+body.dark-mode .task-list li .complete-btn {
+    background-color: #28a745; /* Vert */
+    color: white;
+}
+
+body.dark-mode .task-list li .complete-btn:hover {
+    background-color: #218838; /* Vert foncé */
+}
+
+body.dark-mode .task-list li .edit-btn {
+    background-color: #ffc107; /* Jaune */
+    color: white;
+}
+
+body.dark-mode .task-list li .edit-btn:hover {
+    background-color: #e0a800; /* Jaune foncé */
+}
+
+body.dark-mode .task-list li .delete-btn {
+    background-color: #dc3545; /* Rouge */
+    color: white;
+}
+
+body.dark-mode .task-list li .delete-btn:hover {
+    background-color: #c82333; /* Rouge foncé */
+}
+
+

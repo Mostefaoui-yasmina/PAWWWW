@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --bg-color: #f9f9ff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --form-bg: #ffffff;
+    --btn-color: #ffffff;
+}
+
+/* Style de base pour la page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card Styling : Le cadre qui va entourer tout le formulaire */
+.card {
+    background-color: var(--form-bg);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Logo : centré et réduit si besoin */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Titre */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Groupes de saisie */
+.input-group {
+    margin-bottom: 20px;
+    text-align: center; /* Centre les éléments à l'intérieur de .input-group */
+}
+
+.input-group input {
+    width: 90%;  /* Ajuste la largeur des champs pour un meilleur centrage */
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: block; /* S'assurer que les champs prennent toute la largeur disponible */
+    margin: 0 auto; /* Centrer horizontalement les champs */
+    transition: border-color 0.3s ease;
+}
+
+/* Focus sur les champs de saisie */
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Bouton d'inscription */
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: var(--btn-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}

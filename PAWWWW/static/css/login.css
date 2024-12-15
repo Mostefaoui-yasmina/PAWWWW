@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --bg-color: #f9f9ff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --form-bg: #ffffff;
+    --btn-color: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style de la zone de login */
+.login-container {
+    background-color: var(--form-bg);
+    padding: 30px;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de cadre */
+    width: 100%;
+    max-width: 400px; /* Largeur maximale */
+    text-align: center;
+}
+
+/* Logo centré */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Titre */
+h2 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Styles des champs de formulaire */
+.input-group {
+    margin-bottom: 20px;
+    text-align: center; /* Centre le texte et les éléments à l'intérieur */
+}
+
+.input-group input {
+    width: 90%;  /* Limiter la largeur des champs pour un meilleur centrage */
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    display: block; /* S'assurer que les champs prennent toute la largeur disponible */
+    margin: 0 auto; /* Centrer les champs */
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Bouton */
+.btn-primary {
+    width: 90%;  /* Centrer le bouton et le rendre légèrement plus petit que les champs */
+    padding: 15px;
+    font-size: 1.1rem;
+    color: var(--btn-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px auto; /* Centrer le bouton */
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Liens */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

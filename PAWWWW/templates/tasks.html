@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>DO-IT</h1>
+            <h2>Organise tes journées avec style et efficacité !</h2>
+            <h2>
+                <img src="{{ url_for('static', filename='image/logo.png') }}" alt="Logo de la to-do list" class="navbar-logo" width="60">
+            </h2>
+
+        </div>
+
+    </header>
+    <button id="dark-mode-toggle">Mode sombre 🌙</button>
+
+    <div class="motivation-container">
+        <center><p id="motivation-message">Bienvenue ! Soyez prêt à accomplir vos tâches !</p></center>
+    </div>
+
+    <br>
+    <br>
+    
+    <main class="container">
+        <!-- Progress Circle -->
+        <center> <div class="progress-container">
+            <svg class="progress-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+                  <!-- Cercle de fond (gris) -->
+                  <circle class="background" cx="75" cy="75" r="70" stroke-width="10" />
+                  
+
+
+                  <!-- Cercle de progression (se remplira) -->
+                  <circle class="foreground" cx="75" cy="75" r="70" stroke-width="10" stroke-dasharray="440" stroke-dashoffset="440" />
+                
+                 <!-- Texte au centre du cercle -->
+                 <text x="50%" y="50%" text-anchor="middle" dy=".3em" class="progress-text">0%</text>
+              </svg>
+         </div>
+     </center>
+        <!-- Task Summary -->
+        <br><br><br>
+        <section class="task-summary">
+            <div class="summary-card">
+                <h3> Tâches totales </h3>
+                <p id="total-tasks">0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Tâches réalisées</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Tâches en cours</h3>
+                <p id="uncompleted-tasks">0</p>
+            </div>
+        </section>
+
+        <section class="add-task">
+            <h2>📝 Ajouter une tâche</h2>
+            <form id="taskForm">
+                <input type="text" id="title" placeholder="Nom de la Tache" required>
+                <select id="category" required>
+                    <option value="" disabled selected>Catégorie</option>
+                    <option value="Travail et Productivité">Travail et Productivité 💼</option>
+                    <option value="Études et Formation">Études et Formation 📚 </option>
+                    <option value="Maison et Organisation">Maison et Organisation 🏠 </option>
+                    <option value="Santé et Bien-être">Santé et Bien-être 🧘‍♂️</option>
+                    <option value="Sport">Sport 🏋️ </option>
+                    <option value="Loisirs">Loisirs 🎨</option>
+                    <option value="Autres">Autres 🌈</option>
+                </select>
+                <select id="priority" required>
+                    <option value="" disabled selected>Priorité</option>
+                    <option value="Élevée">Élevée 🔥</option>
+                    <option value="Moyenne">Moyenne ⚡️</option>
+                    <option value="Faible">Faible 🌱</option>
+                </select>
+                <input type="date" id="due_date" placeholder="Date limite (Optional)">
+                <button type="submit">+ Ajouter</button>
+                
+                  
+            </form>
+        </section><!-- Task List -->
+        <section class="task-list-section">
+            <h2>📋 Ma Liste</h2>
+            <ul id="task-list" class="task-list">                                                                                                 <!-- Tasks will be dynamically added here -->
+                <!-- Exemple de tâche dynamique -->
+                <!-- Cette tâche est un exemple, elle sera ajoutée dynamiquement par JavaScript -->
+                
+            </ul>
+            
+              
+        </section>
+        <br>
+        <br>
+        <a href="{{ url_for('login') }}" class="link">Se déconnecter 🚪</a>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
